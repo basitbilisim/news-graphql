@@ -1,0 +1,83 @@
+----query----
+
+{
+  users{
+    userId
+    firstname
+    lastname
+    special
+    email
+    password
+  }
+}
+-----------------------------
+{
+  news(langId:3,categoryId:2){
+    newId
+    title
+    body
+    categoryId
+    langId
+  }
+}
+-----------------------------
+{
+  categories(langId:1){
+    categoryId
+    categoryName
+    langId
+  }
+}
+
+
+----mutation----
+
+mutation{
+  addNew(title:"sjjsjs",body:"sakljaslkdjaskls",authorId:1,categoryId:2,langId:1){
+    status
+    message
+    data
+  }
+}
+---------------------------------
+mutation{
+  deleteNew(newId:7){
+    status
+    message
+    data
+  }
+}
+----------------------------------
+mutation{
+login(email:"abdulaziz@gmail.com",password:"1234",){
+    status
+    message
+    data
+  }
+}
+--------------------------------
+mutation{
+  register(firstname:"Javohir",lastname:"tursunov",password:"1234",email:"javoh@gmail.com",special:"programist"){
+    status
+    message
+    data
+  }
+}
+-------------------------------
+mutation{
+  addCategory(categoryName:"Galaksi",langId:2){
+    status
+    message
+    data
+  }
+}
+-------------------------------------
+mutation{
+  deleteCategory(CategoryId:16){
+    status
+    message
+    data
+  }
+}
+
+ustoz hammasida put ishlaydi 
